@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Carson_Ho</title>
+
+    <script>
+
+
+
+         function callAndroid(){
+           document.location = "js://webview?arg1=111&arg2=13132";
+           alert("result is");
+         }
+
+function callByAndroidParam(msg1){
+     console.log("callByAndroid_param"+msg1)
+    alert("Js收到消息："+msg1);
+    showElement("Js收到消息-->方法callByAndroidParam被调用,参数:"+msg1);
+
+  }
+  function showElement(msg){
+      var div   =document.getElementById("div_box");  //获取div
+      var ele=document.createElement('h6');    //创建h2元素节点
+      ele.innerHTML=msg;                //设置h2节点的内容
+      div.appendChild(ele);                    //添加子节点ele
+
+
+}
+    </script>
+</head>
+
+<!-- 点击按钮则调用callAndroid（）方法  -->
+<body>
+
+<button type="button" id="button1" onclick="callAndroid()">点击调用Android代码</button>
+<button type="button" id="button3" onclick="callByAndroidParam(msg1)">点击调用Android代码</button>
+<div id="div_box"
+     style="width: 100%;min-height: 100%;position: absolute;background: #0ff;margin-top: -50px;margin: 0px">
+
+
+</div>
+</body>
+</html>
