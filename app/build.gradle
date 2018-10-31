@@ -36,5 +36,6 @@ dependencies {
     compile 'com.just.agentweb:agentweb:4.0.2'
     implementation 'org.aspectj:aspectjrt:1.8.9'
     implementation 'me.jessyan:autosize:1.0.1'
-    implementation project(':mylibrary')
+    //implementation project(':mylibrary')
+    implementation 'com.github.chensong1993:WebviewJs:v1.1.5'
 }
